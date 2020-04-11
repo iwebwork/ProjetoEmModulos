@@ -7,9 +7,11 @@
 
         public function index()
         {
-            $dados = array();
+            $dados = array(
+                
+            );
             
-            $this->loadView('notfound',$dados);
+            $this->loadView('404',$dados);
         }
 
     }

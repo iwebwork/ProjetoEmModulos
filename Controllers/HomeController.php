@@ -7,11 +7,13 @@
 
         public function index()
         {
-           
-            $usuarios = new \Models\Usuarios();
+            if(empty($_SESSION['nome'])){
+                $BASE_URL = BASE_URL;
+                header("Location:$BASE_URL/login");
+            }
+
             $dados = array();
-            $dados['lista'] = $usuarios->getNomes();
-            //print_r($dados['lista']);
+           
             $this->loadTempleteOne('home',$dados);
 
         }
