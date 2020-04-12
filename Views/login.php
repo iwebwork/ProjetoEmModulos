@@ -1,11 +1,11 @@
 <html>
     <header>
+        <meta charset="UTF-8">
         <title>Pagina de Login</title>
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>assets/css/style.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- Custom styles for this template-->
         <link href="<?php echo BASE_URL;?>/assets/css/sb-admin-2.min.css" rel="stylesheet">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </header>
     <body class="bg-gradient-primary">
         <div class="container">
@@ -25,12 +25,12 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Bem Vindo!</h1>
                                     </div>
-                                        <form class="user">
+                                        <div class="user" id="formLogin">
                                             <div class="form-group">
-                                                <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Digite seu email...">
+                                                <input name="email" type="email" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Digite seu email...">
                                             </div>
                                             <div class="form-group">
-                                                <input name="senha" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Digite sua senha">
+                                                <input name="senha" type="password" class="form-control form-control-user" id="senha" placeholder="Digite sua senha">
                                             </div>
                                             <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -38,11 +38,10 @@
                                                 <label class="custom-control-label" for="customCheck">Remember Me</label>
                                             </div>
                                             </div> -->
-                                            <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                            </a>
-                                        </form>
-                                        <hr>
+                                            <button id="enviar" class="btn btn-primary btn-user btn-block">Enviar</button>
+                                             
+                                        </div>
+                                        <!-- <hr> -->
                                         <!-- <div class="text-center">
                                             <a class="small" href="forgot-password.html">Esqueceu Senha?</a>
                                         </div> -->
@@ -61,10 +60,9 @@
 
         </div>
         
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/style.js"></script>
-
-
-
+        <script type="text/javascript" src="<?php echo BASE_URL;?>/assets/js/login.js"></script>
+        
     </body>
 </html>
