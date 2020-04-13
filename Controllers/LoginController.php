@@ -18,7 +18,7 @@ class LoginController extends Controller{
         public function loginAction()
         {
             $json = array(
-                'Success' => false,
+                'success' => false,
                 'msg' =>'',
             );
 
@@ -29,16 +29,16 @@ class LoginController extends Controller{
                 if(!empty($resposta['nome'])){
                     $usuario->setNome($resposta['nome']);
                     $Singleton->setNomeUsuario($usuario->getNome());
-                    $json['Success'] = true;
+                    $json['success'] = true;
                     $json['msg'] = "Usuario ".$Singleton->getNomeUsuario()." logado com sucesso";
                     $_SESSION['nome'] = $Singleton->getNomeUsuario();
                 }else if($resposta === false){
-                    $json['Success'] = false;
+                    $json['success'] = false;
                     $json['msg'] = 'Usuario não existe';
                 }
 
             }else{
-                $json['Success'] = false;
+                $json['success'] = false;
                 $json['msg'] = "Digite o email e/ou senha";
             }
             echo json_encode($json);
