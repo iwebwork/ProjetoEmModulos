@@ -19,6 +19,11 @@
 
         }
 
+        public function __destruct()
+        {
+           $this->setNomeUsuario('');
+        }
+
         public function setNomeUsuario($n){
             $this->nomeUsuario = $n;
         }

@@ -10,8 +10,11 @@ class LoginController extends Controller{
         public function index()
         {
             $dados = array();
-           
-            $this->loadView('login',$dados);
+            if(empty($_SESSION['nome'])){
+                $this->loadView('login',$dados);
+            }else{
+                header("Location:".BASE_URL);
+            }
 
         }
 
@@ -47,7 +50,10 @@ class LoginController extends Controller{
 
         }
 
-
-
+        public function sair(){
+            Singleton::getInstance()->__destruct();
+            session_destroy();
+            header("Location:".BASE_URL."/login");
+        }
 
     }
