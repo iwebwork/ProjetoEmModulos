@@ -37,7 +37,7 @@ class LoginController extends Controller{
                     $_SESSION['nome'] = $Singleton->getNomeUsuario();
                 }else if($resposta === false){
                     $json['success'] = false;
-                    $json['msg'] = 'Usuario não existe';
+                    $json['msg'] = 'Email e/ou senha incorretos';
                 }
 
             }else{
